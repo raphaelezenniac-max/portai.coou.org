@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>portal.coou.edu.ng</title>
+  <meta charset="UTF-8"/>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="welcome.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .menu-list .active-btn a{
+      background: #f0f0f0;
+      color: #0b5ed7;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+    
+    html, body {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+            /*HEADER*/
+    #header {
+      height: var(--header-h);
+      background: rgb(255, 255, 255);
+      padding: 13px 17px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 3px rgb(235, 235, 235);
+    }
+    
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 20px;
+      height: 13px;
+      cursor: pointer;
+      /*background-color: green;*/
+    }
+    
+    .menu-icon span {
+      display: block;
+      height: 3px;
+      background-color: #000;
+    }
+    
+    .login-btn {
+      margin-left: auto;
+      background-color: rgb(0, 80, 255);
+      padding: 11px 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    
+    .login-btn a {
+      color: rgb(255,255,255);
+      text-decoration: none;
+    }
+    
+            /*HERO SECTION*/
+    
+    .hero {
+      margin-top: 4rem;
+      /*background-color: blue;*/
+    }
+    .hero-img {
+      position: relative;   /* IMPORTANT */
+      width: 100%;
+      /*max-width: 400px; */    /* optional */
+    }
+    
+    .hero-img img {
+      display: block;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+            /*MENU SECTION*/
+    
+    .menu {
+      /*background: pink;*/
+    }
+    
+    .menu > div:first-child {
+      width: 100%;
+      height: auto;
+      display: flex;
+      /*justify-content: center;
+      align-items: center;*/
+      text-align: center;
+      flex-direction: column;
+      column-gap: 2px;
+      padding: 80px 10px;
+    }
+    
+    .menu > div:first-child h1 {
+      font-size: 1.4rem; /* ≈ 25px */
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    
+    .menu > div:first-child p {
+      font-size: 1rem;     /* makes it close to Acode */
+      line-height: 1.4;    /* tighter spacing between lines */
+      text-align: center;  /* center like your preview */
+      margin-top: 15px;
+    }
+    
+            /*Cards Section*/
+    
+    .menu > div:nth-child(2) {
+      background: rgb(241,241,241);
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 25px;
+      padding: 20px 20px 40px 20px;
+      border-radius: 20px;
+    }
+    
+    .card {
+      background: rgb(255,255,255);
+      padding: 45px 20px;
+      border-radius: 10px;
+    }
+    
+    .chain {
+      margin-bottom: 30px;
+    }
+    
+    .chain img{
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+    .card h2 {
+      font-size: 1.1rem;       /* smaller, like Acode */
+      line-height: 1.2;        /* tighter spacing */
+      margin-bottom: 0.75rem;  /* reduces gap below heading */
+    }
+    
+    .select {
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+    
+    .links {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgb(0, 80, 255);
+      margin-bottom: 12px;
+    }
+    
+    .link {
+      font-size: 14px;
+      color: rgb(0, 80, 255);
+    }
+    
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-direction: column;
+    }
+    
+    .closing {
+      margin-top: 8rem;
+    }
+    
+    .foot {
+      color: rgb(100, 100, 100);
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    
+    .phone {
+      color: rgb(0, 153, 51);
+    }
+    
+    .since {
+      color: rgb(100, 100, 100);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 2.5;
+      text-align: center;
+    }
+    
+    .chat-footer {
+      background: transparent;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 14px 0px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      z-index: 999;
+    }
+    
+    .chat-btn {
+      background: #e60000;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 15px;
+      /*border-radius: 4px;*/
+      text-decoration: none;
+      /*box-shadow: 0 4px 10px rgba(0,0,0,0.25);*/
+    }
+    
+    .chat-btn:active {
+      transform: scale(0.96);
+    }
+    
+            /*NAV SECTION/*
+    
+    /* MENU PANEL */
+    .menu-panel {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 500;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: top 0.4s ease-in-out;
+      padding: 2.5rem 2.5rem;
+    }
+    
+    /* Slide down when active */
+    .menu-panel.active {
+      top: 0;
+    }
+    
+    /* Close button */
+    .menu-close {
+      background: none;
+      color: rgb(34, 34, 34);
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    
+    /* Menu list */
+    .menu-list {
+      list-style: none;
+      padding: 1rem 0 1rem 0;
+      margin: 0;
+    }
+    
+    .menu-list li {
+      padding: 0.75rem 0;
+    }
+    
+    .menu-list li .active {
+      text-decoration: none;
+      font-size: 1rem;
+      color: rgb(34, 34, 34);
+      font-weight: 500;
+    }
+    
+    .menu-list li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: rgba(34, 34, 34, 0.6);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="menu-icon menu-btn" id="openMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="login-btn"><a href="logins.html">Login</a></button>
+  </header>
+  
+  <div class="menu-overlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <button class="menu-close" id="closeMenu">×</button>
+    <ul class="menu-list">
+      <li><a href="welcome.html" class="active">Home</a></li>
+      <li><a href="#">Check Admission Status</a></li>
+      <li><a href="#">Sundry payments</a></li>
+      <li><a href="#">E-Bursary</a></li>
+      <li><a href="#">E-Certificate</a></li>
+      <li><a href="#">eTranscript</a></li>
+    </ul>
+  </div>
+  
+  <main>
+    <section class="hero">
+      <div class="hero-img">
+        <img src="images/hero-img.jpg" alt="students">
+      </div>
+    </section>
+    <section class="menu">
+      <div>
+        <h1>Programmes, Applications and <br>Payments</h1>
+        <p>Find all our authenticated applications and <br>registrations below for various student
+<br>types and programmes</p>
+      </div>
+  
+      <div>
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-1.jpg" alt="students">
+          </div>
+          <h2>Undergraduate</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Post Utme Application Invoice</p>
+          <p class="links">Fill Post Utme Application Form</p>
+          <p class="links">Generate Direct Entry Application Invoice</p>
+          <p class="link">Fill Direct Entry Application Form</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-2.jpg" alt="students">
+          </div>
+          <h2>Postgraduate</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="links">Track Application Status</p>
+          <p class="links">Generate Direct Entry Application Invoice</p>
+          <p class="link">Generate Fees Invoice</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-3.jpg" alt="students">
+          </div>
+          <h2>JUPEB</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="links">Fill Application Form</p>
+          <p class="link">Generate Fees Invoice</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-4.jpg" alt="students">
+          </div>
+          <h2>Part Time</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="link">Fill Application Form</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-5.jpg" alt="students">
+          </div>
+          <h2>Supplementary</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="link">Fill Application Form</p>
+        </div>
+      </div>
+    </section>
+    <section class="closing">
+      <p class="foot">Need help? - <span class="phone">08139833300</span></p>
+      <p class="since">Chukwuemeka Odumegwu Ojukwu University ©️ <br>2026</p>
+    </section>
+  </main>
+  <footer class="chat-footer">
+    <a href="#" class="chat-btn">Chat</a>
+  </footer>
+  <script>
+    const menuBtn = document.getElementById('openMenu');
+    const menuPanel = document.getElementById('menuPanel');
+    const closeMenu = document.getElementById('closeMenu');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    menuBtn.addEventListener('click', () => {
+      menuPanel.classList.add('active');
+      menuOverlay.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      menuPanel.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      menuPanel.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
